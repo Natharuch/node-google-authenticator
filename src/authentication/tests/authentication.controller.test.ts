@@ -1,8 +1,10 @@
-import * as mongoose from 'mongoose';
+import * as mongoose from `mongoose`;
 import * as request from 'supertest';
 import App from '../../app';
 import CreateUserDto from '../../user/user.dto';
 import AuthenticationController from '../authentication.controller';
+import { describe, it, jest } from '@type/globals';
+
 
 describe('The AuthenticationController', () => {
   describe('POST /auth/register', () => {

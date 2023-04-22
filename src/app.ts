@@ -4,12 +4,14 @@ import * as express from 'express';
 import * as mongoose from 'mongoose';
 import Controller from './interfaces/controller.interface';
 import errorMiddleware from './middleware/error.middleware';
+// import {MongoClient} from 'mongodb'
+
 
 class App {
   public app: express.Application;
-
+ 
   constructor(controllers: Controller[]) {
-    this.app = express();
+    this.app = express();  
 
     this.connectToTheDatabase();
     this.initializeMiddlewares();
